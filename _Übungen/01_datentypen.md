@@ -42,17 +42,7 @@ Schreibe ein Programm, das eine Variable vom Typ `double` in eine Variable vom T
 
 ---
 
-## Übung 5: Kreisberechnung
-Schreibe ein Programm, das den Umfang und die Fläche eines Kreises berechnet.
-
-- Erstelle eine Variable `radius` vom Typ `double` und weise ihr den Wert `7.5` zu.
-- Berechne den Umfang `umfang` des Kreises mit der Formel: `2 * π * radius`.
-- Berechne die Fläche `flaeche` des Kreises mit der Formel: `π * radius * radius`.
-- Speichere die Ergebnisse in Variablen und gib sie auf der Konsole aus.
-
----
-
-## Übung 6: Tauschen von Variablenwerten
+## Übung 5: Tauschen von Variablenwerten
 Schreibe ein Programm, das die Werte zweier Variablen vertauscht.
 
 - Erstelle zwei Variablen vom Typ `int` mit den Namen `a` und `b`.
@@ -62,7 +52,7 @@ Schreibe ein Programm, das die Werte zweier Variablen vertauscht.
 
 ---
 
-## Übung 7: Konstanten verwenden
+## Übung 6: Konstanten verwenden
 Schreibe ein Programm, das eine Konstante für die Mehrwertsteuer verwendet und den Bruttobetrag eines Einkaufs berechnet.
 
 - Definiere eine Konstante `MWST` vom Typ `double` mit dem Wert `0.19`.
@@ -72,7 +62,7 @@ Schreibe ein Programm, das eine Konstante für die Mehrwertsteuer verwendet und 
 
 ---
 
-## Übung 8: Temperaturumrechnung
+## Übung 7: Temperaturumrechnung
 Schreibe ein Programm, das eine Temperatur in Celsius in Fahrenheit umrechnet.
 
 - Erstelle eine Variable `celsius` vom Typ `double` und weise ihr den Wert `25.0` zu.
@@ -82,7 +72,7 @@ Schreibe ein Programm, das eine Temperatur in Celsius in Fahrenheit umrechnet.
 
 ---
 
-## Übung 9: Durchschnitt berechnen
+## Übung 8: Durchschnitt berechnen
 Schreibe ein Programm, das den Durchschnitt von drei Zahlen berechnet.
 
 - Erstelle drei Variablen `zahl1`, `zahl2`, und `zahl3` vom Typ `int` und weise ihnen die Werte `10`, `20`, und `50` zu.
@@ -91,7 +81,7 @@ Schreibe ein Programm, das den Durchschnitt von drei Zahlen berechnet.
 
 ---
 
-## Übung 10: Alter in Tagen berechnen
+## Übung 9: Alter in Tagen berechnen
 Schreibe ein Programm, das das Alter eines Benutzers in Tagen berechnet.
 
 - Erstelle eine Variable `alter` vom Typ `int` und weise ihr das Alter eines Benutzers in Jahren zu (z. B. `25`).

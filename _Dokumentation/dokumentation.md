@@ -135,7 +135,21 @@ boolean istGroesser = (5 > 3);  // true
 ## Casting
 
 ### Implizites Casting (Widening Conversion)
+Das passiert automatisch, wenn wir von einem "kleineren" zu einem "größeren" Datentyp konvertieren. Java macht das selbst, weil dabei keine Informationen verloren gehen:
 
+```java
+int ganzeZahl = 42;
+double kommaZahl = ganzeZahl;  // automatisch von int zu double
+```
+Die Hierarchie sieht so aus: byte → short → int → long → float → double
+
+### Explizites Casting (Narrowing Conversion)
+Das müssen wir selbst angeben, wenn wir von einem "größeren" zu einem "kleineren" Datentyp konvertieren. Hier können Daten verloren gehen:
+
+```java
+double kommaZahl = 42.7;
+int ganzeZahl = (int) kommaZahl;  // Ergebnis: 42 (Nachkommastellen weg!)
+```
 
 
 

@@ -56,7 +56,8 @@ long weltbevoelkerung = 8000000000L;
 long millisekunden = System.currentTimeMillis();
 ```
 
-**Hinweis:** Bei long-Literalen muss ein `L` am Ende stehen
+>[!NOTE]
+> Bei long-Literalen muss ein `L` am Ende stehen.
 
 ### Gleitkommazahlen
 
@@ -73,7 +74,8 @@ float preis = 19.99f;
 float pi = 3.14159f;
 ```
 
-**Hinweis:** Bei float-Literalen muss ein `f` am Ende stehen!
+>[!NOTE]
+> Bei float-Literalen muss ein `f` am Ende stehen!
 
 #### double
 - **Größe:** 64 Bit (8 Bytes)

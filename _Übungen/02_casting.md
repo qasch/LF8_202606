@@ -31,3 +31,16 @@
 
 ## Übung 6: Fehlerhafte Konvertierung
 1. Schreibe ein Programm, das versucht, eine `String`-Variable in einen `int` zu konvertieren, und beobachte den Fehler.
+
+## Übung 7: Char nach Int
+1. Erstelle eine Variable `text` vom Typ `char` und weise ihr den Wert `c` zu.
+2. Gib den Wert von `text` auf der Konsole aus.
+3. Erstelle eine Variable `intChar` vom Typ `int`, weise ihr aber `text` zu: `int intChar = text;` 
+4. Gib den Wert von `intChar` auf der Konsole aus.
+5. Erkläre, was hier passiert. Vielleicht hilft es ja, `text` auch noch andere Werte zuzuweisen, z.B. `b` oder `d` um es besser zu verstehen.
+
+## Übung 8: Overflow 
+1. Erstelle eine `byte` Variable `kleineZahl` und weise ihr den Wert `126` zu.
+2. Erhöhe nun den Wert von `kleineZahl` um 1 mit `kleineZahl = kleineZahl + 1;` bzw. `kleineZahl++`.
+3. Gib den Wert von `kleineZahl` auf der Konsole aus.
+4. Führe nun die Schritte 2 und 3 nochmal aus und erkläre das Ergebnis.

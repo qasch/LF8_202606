@@ -2,7 +2,7 @@
 
 ## **1. Zahlen von 1 bis 10 ausgeben**
 
-- Schreibe ein Programm, das die Zahlen von `1` bis `10` auf der Konsole ausgibt.  
+- Schreibe ein Programm, das die Zahlen von `10` bis `1` (also absteigend) auf der Konsole ausgibt.  
 - Nutze dafür einmal eine `while` und dann auch eine `for`-Schleife.  
 
 > [!NOTE] 

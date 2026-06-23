@@ -214,21 +214,22 @@ Durch logische Operatoren lassen sich mehrere Bedingungen/Ausdrücke miteinander
 
 ### Logisches UND
 
-```
-true && true   -> true
-true && false  -> false
-false && true  -> false
-false && false -> false
-```
+| Ausdruck       | Ergebnis |
+| -------------- | -------- |
+| `true` && true   |  -> true |
+| true && false  |  -> false |
+| false && true  |  -> false |
+| false && false |  -> false |
 
 ### Logische ODER
 
-```
-true || true   -> true 
-true || false  -> true  
-false || true  -> true 
-false || false -> false 
-```
+| Ausdruck       | Ergebnis |
+| -------------- | -------- |
+| `true || true`   | true |
+| `true || false`  | true  |
+| `false || true` | true |
+| `false || false` | false |
+
 
 ### NOT
 

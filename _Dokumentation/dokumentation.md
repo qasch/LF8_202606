@@ -153,7 +153,90 @@ double kommaZahl = 42.7;
 int ganzeZahl = (int) kommaZahl;  // Ergebnis: 42 (Nachkommastellen weg!)
 ```
 
+## Benutzereingaben mit Scanner
 
+Um Benutzereingaben von der Konsole entgegennehmen zu können, nutzen wir die Klasse `Scanner`, welche importiert werden muss.
 
+In Java stehen die `import` Statements generell ausserhalb der Klasse.
 
+```java
+// Klasse Scanner importieren
+import java.util.Scanner
+
+public class SomeClass {
+    public static void main (String[] args) {
+        // Objekt der Klasse Scanner mit Namen input erzeugen
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Bitte einen Namen eingeben: ");
+        String name = input.nextLine();  // String einlesen
+
+        System.out.println("Bitte eine Zahl eingeben: ");
+        String name = input.nextInt();  // Integer einlesen
+
+        System.out.println("Bitte eine Kommazahl eingeben: ");
+        String name = input.nextDouble();  // Double einlesen
+
+        ...
+    }
+}
+```
+
+## Verzweigungen
+
+Mit Verzweigungen können wir den logischen Ablauf eines Programms steuern.
+
+```java
+if (bedingung) {
+    alles hier in dem Rumpf
+    wird ausgeführt falls bedingung wahr/true
+}
+
+int zahl1 = 5;
+int zahl2 = 7;
+
+if (zahl1 < zahl2) {
+    System.out.println("zahl1 ist kleiner als zahl2");
+} else if (zahl1 > zahl2) {
+    System.out.println("zahl1 ist groesser als zahl2");
+} else {
+    System.out.println("beide zahlen sind gleich gross");
+}
+```
+
+Der `else if` Zweig wird nur ausgeführt/geprüft, falls die erste Bedingug `false` ergibt. 
+
+Nur falls sowohl die Bedingug im `if`-Statement als auch die Bedingung im `if else` Statement `false` sind wird der `else` Zweig ausgeführt.
+
+## Logische Operatoren
+
+Durch logische Operatoren lassen sich mehrere Bedingungen/Ausdrücke miteinander verknüpfen, so dass nach der Auswertung ein einzelner Wahrheitswert herauskommt.
+
+### Logisches UND
+
+```
+true && true   -> true
+true && false  -> false
+false && true  -> false
+false && false -> false
+```
+
+### Logische ODER
+
+```
+true || true   -> true 
+true || false  -> true  
+false || true  -> true 
+false || false -> false 
+```
+
+### NOT
+
+Das *NOT* ist kein logischer Operator, die Negation ist in vielen Fällen jedoch sehr hilfreich um den passenden Ausdruck zu basteln.
+
+```
+(! ausdruck)   -> Ausdruck wird negiert:
+(! true)   -> false
+(! false)   -> true
+```
 

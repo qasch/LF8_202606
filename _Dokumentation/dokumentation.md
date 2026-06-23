@@ -212,7 +212,7 @@ Nur falls sowohl die Bedingug im `if`-Statement als auch die Bedingung im `if el
 
 Durch logische Operatoren lassen sich mehrere Bedingungen/Ausdrücke miteinander verknüpfen, so dass nach der Auswertung ein einzelner Wahrheitswert herauskommt.
 
-### Logisches UND
+### Logisches UND `&&`
 
 | Ausdruck       | Ergebnis |
 | -------------- | -------- |
@@ -221,7 +221,7 @@ Durch logische Operatoren lassen sich mehrere Bedingungen/Ausdrücke miteinander
 | false && true  |  false |
 | false && false |  false |
 
-### Logische ODER
+### Logische ODER `||`
 
 | Ausdruck       | Ergebnis |
 | -------------- | -------- |
@@ -231,9 +231,9 @@ Durch logische Operatoren lassen sich mehrere Bedingungen/Ausdrücke miteinander
 | false \|\| false | false |
 
 
-### NOT
+### NOT `!`
 
-Das *NOT* ist kein logischer Operator, die Negation ist in vielen Fällen jedoch sehr hilfreich um den passenden Ausdruck zu basteln.
+Das *NOT* bzw. die Negation (`!`) ist kein logischer Operator, die Negation ist in vielen Fällen jedoch sehr hilfreich um den passenden Ausdruck zu basteln.
 
 ```
 (! ausdruck)   -> Ausdruck wird negiert:

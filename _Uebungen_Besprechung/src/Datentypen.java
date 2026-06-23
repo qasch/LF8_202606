@@ -43,6 +43,20 @@ public class Datentypen {
         int intDouble = (int) doubleZahl;   // explizites Casting
         System.out.println(intDouble);
 
+        System.out.println(4 + 5);
+        System.out.println("" + 4 + 5);
+        System.out.println("" + (4 + 5));
+
+        int eineZahl = 42;
+        System.out.println(eineZahl);
+
+        double andereZahl = eineZahl;    // implizites Casting
+        System.out.println(andereZahl);
+
+        andereZahl = 42.92;
+        eineZahl = (int) andereZahl;
+        System.out.println(eineZahl);
+
     }
 
 

@@ -241,3 +241,113 @@ Das *NOT* bzw. die Negation (`!`) ist kein logischer Operator, die Negation ist 
 (! false)   -> true
 ```
 
+## Schleifen
+
+### Kopfgesteuerte Schleife
+
+Die Bedingung wird ganz zu Anfang der Schleife geprüft. Solange die Bedingung wahr ist, wird der Rumpf der Schleife ausgeführt.
+
+Es kann also sein, dass die Schleife niemals durchlaufen wird, falls die Bedingung schon anfangs nicht wahr ist.
+
+#### while Schleife
+
+```java
+while (bedingung) {      // Kopf der Schleife
+    doSomething();       // Rumpf der Schleife
+    doSomethingElse();
+}
+
+// Ausgabe der Zahlen von 1 bis 10
+int zahl = 1;           // Zählvariable
+while (zahl <= 10) {    // Bedingung
+    System.out.println(zahl);
+    //zahl = zahl + 1;
+    zahl++;             // Inkrement
+}
+```
+
+#### for-Schleife / Zählschleife
+
+```java
+for (zählvarialbe; bedingung; inkrement) {
+    doSomething();       // Rumpf der Schleife
+    doSomethingElse();
+}
+
+// Ausgabe der Zahlen von 1 bis 10
+for (int i = 1; i <= 10; i++) {
+    System.out.println(i);
+}
+```
+
+### Fussgesteuerte Schleife
+
+Die Bedingung wird erst nach dem Schleifendurchlauf geprüft. Die Schleife wird also mindestens einmal durchlaufen, auch wenn die Bedingung schon anfangs nicht wahr ist.
+
+```java
+do {      
+    doSomething();       // Rumpf der Schleife
+    doSomethingElse();
+} while (bedingung);     // Fuss der Schleife
+```
+
+## Arrays
+
+- Arrays sind "Container", die (im Gegensatz zu Variablen) mehrere Werte aufnehmen können (ähnlich wie eine List in Python).
+- auch Arrays haben einen Datentyp, können also nur Elemente dieses einen Datentyps aufnehmen.
+- Arrays haben eine feste Grösse, die bei der Erstellung angegeben werden muss und im nachhinein nicht mehr geändert werden kann.
+
+### Array Deklaration und Initialisierung
+
+```java
+// Deklaration - wir sagen, dass es das Array gibt 
+int[] zahlen; 
+
+// Initialisierung (Grösse und Standardwerte festlegen)
+zahlen = new int[4];    
+
+// Werte zuweisen (über den Index)
+zahlen[0] = 7;
+zahlen[1] = 3;
+zahlen[2] = 232432;
+
+// Deklaration und Initialisierung in einem Schritt
+String[] texte = new String[3];
+
+// Deklaration, Initialisierung und Wertzuweisung in einem Schritt
+double[] kommaZahlen = {1.43, 5.77, 123.6789, 0.000000001};
+```
+
+### Iteration über Arrays - alle Elemente ausgeben lassen
+
+```java
+String[] texte = {"Hallo", "du", "da", "ganz", "weit", "hinten"};
+
+// unelegant, machen wir so nicht:
+System.out.println(texte[0]);
+System.out.println(texte[1]);
+System.out.println(texte[2]);
+System.out.println(texte[3]);
+System.out.println(texte[4]);
+System.out.println(texte[5]);
+
+// besser, mit klassischer for-Schleife:
+for (int i = 0; i < texte.length; i++) {
+    System.out.println(texte[i]);
+}
+
+// noch besser, mit Enhanced-For-Loop / For-Each-Loop
+for (String text : texte) {
+    System.out.println(text);
+}
+```
+
+
+
+
+
+
+
+
+
+

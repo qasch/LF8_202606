@@ -35,25 +35,25 @@ public class Eisautomat {
 
     static void main(String[] args) {
         zeigeEissortenAn();
-        betragAnzeigen();
-        pruefeBetrag();
-        geldEinzahlen(1.0);
-        betragAnzeigen();
-        pruefeBetrag();
-        geldEinzahlen(2.0);
-        betragAnzeigen();
-        pruefeBetrag();
+
+        while (eingezahlterBetrag < preis) {
+            betragAnzeigen();
+            pruefeBetrag();
+            //geldEinzahlen(1.0);
+        }
+
     }
 
     // Definition der Funktion
-    // wir sagen also, was beim Aufruf der 
+    // wir sagen also, was beim Aufruf der
     static void zeigeEissortenAn() {
         System.out.println("Vanille - " + preis);
     }
 
     // Funktion mit Paramenter (double betrag)
     static void geldEinzahlen(double betrag) {
-        eingezahlterBetrag = eingezahlterBetrag + betrag;
+        eingezahlterBetrag = Math.round((eingezahlterBetrag + betrag) * 100);
+        eingezahlterBetrag = eingezahlterBetrag / 100;
     }
 
     static void betragAnzeigen() {
@@ -61,13 +61,26 @@ public class Eisautomat {
     }
 
     static void pruefeBetrag() {
-        if(eingezahlterBetrag > preis) {
-            System.out.println("zu viel");
-        } else if(eingezahlterBetrag < preis) {
-            System.out.println("zu wenig");
+        if(eingezahlterBetrag >= preis) {
+            gibWechselgeldAus();
+            gibEisAus();
         } else {
-            System.out.println("passend");
+            System.out.println("zu wenig");
+            geldEinzahlen(0.10);
         }
     }
 
+    static double berechneWechselgeld() {
+        return eingezahlterBetrag - preis;
+    }
+
+    static void gibWechselgeldAus() {
+        if (eingezahlterBetrag > preis) {
+            System.out.println("Wechselgeld: " + berechneWechselgeld());
+        }
+    }
+
+    static void gibEisAus() {
+        System.out.println("Hier ist dein Eis :)");
+    }
 }

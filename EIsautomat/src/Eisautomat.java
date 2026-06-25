@@ -30,8 +30,8 @@ public class Eisautomat {
     6. gibEisAus()
     7. gibWechselgeldAus()
      */
-    static double eingezahlterBetrag = 0.0;
-    static double preis = 1.5;
+    static int eingezahlterBetrag = 0;
+    static int preis = 150;
 
     static void main(String[] args) {
         zeigeEissortenAn();
@@ -39,7 +39,6 @@ public class Eisautomat {
         while (eingezahlterBetrag < preis) {
             betragAnzeigen();
             pruefeBetrag();
-            //geldEinzahlen(1.0);
         }
 
     }
@@ -50,14 +49,13 @@ public class Eisautomat {
         System.out.println("Vanille - " + preis);
     }
 
-    // Funktion mit Paramenter (double betrag)
-    static void geldEinzahlen(double betrag) {
-        eingezahlterBetrag = Math.round((eingezahlterBetrag + betrag) * 100);
-        eingezahlterBetrag = eingezahlterBetrag / 100;
+    // Funktion mit Paramenter (int betrag)
+    static void geldEinzahlen(int betrag) {
+        eingezahlterBetrag = eingezahlterBetrag + betrag;
     }
 
     static void betragAnzeigen() {
-        System.out.println("Eingezahlter Betrag: " + eingezahlterBetrag);
+        System.out.println("Eingezahlter Betrag: " + eingezahlterBetrag/100.0 + " Euro");
     }
 
     static void pruefeBetrag() {
@@ -66,11 +64,11 @@ public class Eisautomat {
             gibEisAus();
         } else {
             System.out.println("zu wenig");
-            geldEinzahlen(0.10);
+            geldEinzahlen(10);
         }
     }
 
-    static double berechneWechselgeld() {
+    static int berechneWechselgeld() {
         return eingezahlterBetrag - preis;
     }
 

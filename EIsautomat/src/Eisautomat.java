@@ -51,7 +51,22 @@ public class Eisautomat {
     // Definition der Funktion
     // wir sagen also, was beim Aufruf der
     static void zeigeEissortenAn() {
-        System.out.println("Es gibt folgende Eissorten: Vanille - " + formatiereBetragInEuro(preis));
+        //System.out.println("Es gibt folgende Eissorten: Vanille - " + formatiereBetragInEuro(preis));
+
+        String[] eissorten = {"Vanille", "Schoko", "Erbeer", "Mango"};
+        int[] preise = {100, 150, 100, 200};
+        boolean[] verfügabreSorten = {true, true, false, true};
+
+        System.out.println("Es gibt folgende Eissorten: ");
+        // Vanille - 100
+        for(int i = 0; i < eissorten.length; i++) {
+            //System.out.println(eissorten[0] + " - " + preise[0]);
+            //System.out.println(eissorten[1] + " - " + preise[1]);
+            //System.out.println(eissorten[2] + " - " + preise[2])
+            //System.out.println(eissorten[3] + " - " + preise[3])
+            System.out.println(eissorten[i] + " - " + preise[i]);
+        }
+
     }
 
     // Funktion mit Paramenter (int betrag)

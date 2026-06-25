@@ -337,14 +337,54 @@ for (int i = 0; i < texte.length; i++) {
 }
 
 // noch besser, mit Enhanced-For-Loop / For-Each-Loop
-for (String text : texte) {
-    System.out.println(text);
+for (String element : texte) {
+    System.out.println(element);
 }
 ```
 
+## Funktionen / Methoden
 
+Funkionen/Methode helfen dabei, unser Porgramm in kleine, überschaubare Teilaufgaben zu zerlegen. Jede Funktion übernimmt dabei genau eine Aufgabe.
 
+Dadurch wird unser Code:
 
+- übersichtlicher
+- wartbarer
+- besser wiederverwendbar
+- besser lesbar/verständlicher
+
+> [!NOTE]
+> Funktionen und Methoden sind im Prinzip das gleiche. Im objektorientierten Kontext nennen wir Funktionen Methoden. Die Begriffe könnten eigentlich auch synonym verwendet werden.
+
+### Aufbau einer Methode
+
+#### Definition von Methoden
+```java
+static void gibEtwasAus() {
+    System.out.println("Ich gebe Text aus.");
+}
+
+static int addiere(int a, int b) {
+    return a + b;
+}
+```
+
+#### Aufruf von Methoden
+Statische Methoden werden über ihren Namen aufgerufen. 
+```java
+gibEtwasAus();    // -> "Ich gebe Text aus"
+
+addiere(42, 24);  // -> 66  (keine Ausgabe)
+int ergebnis = addiere(42, 24);    // 66 wird Variable ergebnis zugewiesen
+```
+
+- `static`: Statische Methode, gehört zur Klasse, kann direkt aufgerufen werden, braucht kein Objekt, welches sie aufruft
+- `void`: Rückgabetyp der Methode. `void` heisst soviel wie *nichts*. Diese Methode gibt also nichts zurück, in diesem Fall gibt sie etwas aus. Methoden mit diesem Rückgabetyp könnten z.B. auch einen bestimmten Wert verändern. Methoden mit diesem Rückgabetyp haben kein `return`.
+- `int`: Rückgabetyp der Methode. Diese Methode gibt einen Wert vom Typ *Integer* über das Schlüsselwort `return` zurück. Eine Methode kann theoretisch jeden beliebigen (primitiven oder auch komplexen) Datentyp zurückgeben.
+- `gibEtwasAus` / `addiere`: Name der Methode. Beliebig wählbar. Wir versuchen unsere Methoden immer in Verbalform zu benennen.
+- `()`: Diese Methode nimmt keine Parameter entgegen.
+- `(int a, int b)`: Diese Methode hat zwei *Parameter* vom Typ Integer. Diese sind dann lokale Variablen innerhalb der Methode (sie existieren nur in der Methode, nicht ausserhalb). Beim Aufruf der Methode **müssen** dann auch zwei konkrete Werte (-> *Argumente*) übergeben werden.
+- `{}`: Rumpf der Methode. Alles was in diesen Klammern steht wird ausgeführt wenn die Methode aufgerufen wird. 
 
 
 

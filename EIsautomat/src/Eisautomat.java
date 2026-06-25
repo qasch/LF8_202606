@@ -34,19 +34,24 @@ public class Eisautomat {
     static int preis = 150;
 
     static void main(String[] args) {
+
         zeigeEissortenAn();
 
-        while (eingezahlterBetrag < preis) {
+        while(!istGenugGeldEingezahlt()) {
             betragAnzeigen();
-            pruefeBetrag();
+            System.out.println("Das ist noch zu wenig Geld, bitte mehr einwerfen");
+            geldEinzahlen(100);
         }
 
+        betragAnzeigen();
+        gibEisAus();
+        gibWechselgeldAus();
     }
 
     // Definition der Funktion
     // wir sagen also, was beim Aufruf der
     static void zeigeEissortenAn() {
-        System.out.println("Vanille - " + preis);
+        System.out.println("Es gibt folgende Eissorten: Vanille - " + formatiereBetragInEuro(preis));
     }
 
     // Funktion mit Paramenter (int betrag)
@@ -55,17 +60,11 @@ public class Eisautomat {
     }
 
     static void betragAnzeigen() {
-        System.out.println("Eingezahlter Betrag: " + eingezahlterBetrag/100.0 + " Euro");
+        System.out.println("Eingezahlter Betrag: " + formatiereBetragInEuro(eingezahlterBetrag));
     }
 
-    static void pruefeBetrag() {
-        if(eingezahlterBetrag >= preis) {
-            gibWechselgeldAus();
-            gibEisAus();
-        } else {
-            System.out.println("zu wenig");
-            geldEinzahlen(10);
-        }
+    static boolean istGenugGeldEingezahlt() {
+        return eingezahlterBetrag >= preis;
     }
 
     static int berechneWechselgeld() {
@@ -74,11 +73,15 @@ public class Eisautomat {
 
     static void gibWechselgeldAus() {
         if (eingezahlterBetrag > preis) {
-            System.out.println("Wechselgeld: " + berechneWechselgeld());
+            System.out.println("Wechselgeld: " + formatiereBetragInEuro(berechneWechselgeld()));
         }
     }
 
     static void gibEisAus() {
         System.out.println("Hier ist dein Eis :)");
+    }
+
+    static String formatiereBetragInEuro(int betrag) {
+        return betrag/100.0 + "0 €";
     }
 }

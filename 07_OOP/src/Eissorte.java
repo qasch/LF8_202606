@@ -2,10 +2,10 @@ public class Eissorte {
     // Attribute - Eigenschaften
     // -> es gibt diese Attribute, jedes Objekt hat diese Eigenschaften
     // -> jedes Objekt hat aber andere, unterschiedliche konkrete Ausprägungen dieser Attribute
-    private String sorte;
-    private String farbe;
-    private int preis;
-    private boolean istVerfuegbar;
+    protected String sorte;
+    protected String farbe;
+    protected int preis;
+    protected boolean istVerfuegbar;
 
     // Konstruktor
     // Standardkonstruktor - ist so in jeder Klasse enthalten
@@ -14,7 +14,7 @@ public class Eissorte {
     //
     //}
 
-    Eissorte() {
+    public Eissorte() {
         this.sorte = "Standard";
         this.preis = 100;
         this.istVerfuegbar = true;
@@ -23,14 +23,14 @@ public class Eissorte {
 
     // Konstruktor wird überladen
     // muss sich in der Parameterliste unterscheiden
-    Eissorte(String sorte) {
+    public Eissorte(String sorte) {
         this.sorte = sorte;
         this.preis = 150;
         this.istVerfuegbar = true;
         this.farbe = "rot";
     }
 
-    Eissorte(String sorte, int preis, boolean istVerfuegbar, String farbe) {
+    public Eissorte(String sorte, int preis, boolean istVerfuegbar, String farbe) {
         this.sorte = sorte;
         this.setPreis(preis);
         this.istVerfuegbar = istVerfuegbar;
@@ -67,7 +67,7 @@ public class Eissorte {
     }
 
     // Methoden - Funktionalitäten
-    void gibNameUndPreisAus() {
+    protected void gibInformationenAus() {
         String sorte = "lokale Sorte";
         System.out.println("Ich bin die Sorte " + this.sorte + ", koste " +
                 this.formatierePreis() + " bin " + this.farbe + " und bin verfügbar: " + this.istVerfuegbar);

@@ -1,4 +1,4 @@
-public class Eissorte {
+public abstract class Eissorte {
     // Attribute - Eigenschaften
     // -> es gibt diese Attribute, jedes Objekt hat diese Eigenschaften
     // -> jedes Objekt hat aber andere, unterschiedliche konkrete Ausprägungen dieser Attribute
@@ -67,9 +67,11 @@ public class Eissorte {
     }
 
     // Methoden - Funktionalitäten
-    protected void gibInformationenAus() {
-        String sorte = "lokale Sorte";
-        System.out.println("Ich bin die Sorte " + this.sorte + ", koste " +
-                this.formatierePreis() + " bin " + this.farbe + " und bin verfügbar: " + this.istVerfuegbar);
-    }
+    //protected void gibInformationenAus() {
+    //    String sorte = "lokale Sorte";
+    //    System.out.println("Ich bin: " + this.sorte + ", koste " +
+    //            this.formatierePreis() + " bin " + this.farbe + " und bin verfügbar: " + this.istVerfuegbar);
+    //}
+
+    protected abstract void gibInformationenAus();
 }

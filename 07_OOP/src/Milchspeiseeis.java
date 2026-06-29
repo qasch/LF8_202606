@@ -1,4 +1,4 @@
-public class Milchspeiseeis extends Eissorte {
+public class Milchspeiseeis extends Eissorte implements Schmelzbar {
     private int fettanteil;
     private boolean enthaeltLaktose;
 
@@ -21,9 +21,15 @@ public class Milchspeiseeis extends Eissorte {
     }
 
     // Methode der Elternklasse überschreiben
+    @Override
     protected void gibInformationenAus() {
-        System.out.println("Ich bin die Sorte " + this.sorte + ", koste " +
-                this.formatierePreis() + " bin " + this.farbe + " habe eine Fettanteil von " +
+        System.out.println("Ich bin die Sorte " + super.sorte + ", koste " +
+                super.formatierePreis() + " bin " + super.farbe + " habe eine Fettanteil von " +
                 this.fettanteil + "% und enthalte Laktose: " + this.enthaeltLaktose);
+    }
+
+    @Override
+    public void schmelzen() {
+        System.out.println(getSorte() + " der Klasse Milchspeiseeis schmilzt");
     }
 }
